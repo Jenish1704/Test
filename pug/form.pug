@@ -1,0 +1,24 @@
+//- //- Write express js script to load student form using pug file which contains following fields Name(text) 
+//- Email(email) Course(radio : CE, IT, CSE) Once form submitted then data must be displayed 
+//- on ‘/data’ page using pug file. Means data should be submitted from express application to PUG file.
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        form(action="/data" method="post") 
+            input( type="text" name="name") 
+            |Name 
+            input( type="text" name="email") 
+            |Email 
+            input(type="radio" name="course" value="CSE") 
+            |CSE
+            input(type="radio" name="course" value="IT") 
+            |IT
+            input(type="radio" name="course" value="CE") 
+            |CE
+            input(type="submit")
+
